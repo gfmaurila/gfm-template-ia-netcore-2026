@@ -1,0 +1,22 @@
+<mxfile host="app.diagrams.net" modified="2026-11-10T00:00:00.000Z" agent="GFM.Template" version="24.7.17" type="device">
+  <diagram id="gfm-backend" name="Referência lógica de Back-end">
+    <mxGraphModel dx="1600" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="980" math="0" shadow="0">
+      <root>
+        <mxCell id="0" /><mxCell id="1" parent="0" />
+        <mxCell id="title" value="Back-end | Referência lógica de dependências para .NET" style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=26;fontStyle=1;fontColor=#123B5D;" vertex="1" parent="1"><mxGeometry x="50" y="35" width="1450" height="50" as="geometry" /></mxCell>
+        <mxCell id="sub" value="Esta é uma referência lógica para .NET. Java, Python, PHP e outras stacks usam estruturas físicas idiomáticas." style="text;html=0;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=14;fontColor=#526170;" vertex="1" parent="1"><mxGeometry x="52" y="85" width="1450" height="30" as="geometry" /></mxCell>
+        <mxCell id="api" value="Hosts / pontos de composição&#xa;API • Worker (opcional) • Batch (opcional)" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#123B5D;strokeColor=#0B2438;fontColor=#FFFFFF;fontSize=16;arcSize=12;" vertex="1" parent="1"><mxGeometry x="610" y="165" width="430" height="95" as="geometry" /></mxCell>
+        <mxCell id="app" value="Application&#xa;Casos de uso e orquestração&#xa;Depende de Domain e Core" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#DCEEF2;strokeColor=#138A9E;fontColor=#123B5D;fontSize=16;arcSize=12;" vertex="1" parent="1"><mxGeometry x="650" y="370" width="350" height="110" as="geometry" /></mxCell>
+        <mxCell id="domain" value="Domain&#xa;Regras e modelo&#xa;Depende somente de Core" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#EAF2F8;strokeColor=#2F80ED;fontColor=#123B5D;fontSize=16;arcSize=12;" vertex="1" parent="1"><mxGeometry x="350" y="590" width="260" height="110" as="geometry" /></mxCell>
+        <mxCell id="core" value="Core&#xa;Primitivas e contratos neutros" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#263746;strokeColor=#182531;fontColor=#FFFFFF;fontSize=16;arcSize=12;" vertex="1" parent="1"><mxGeometry x="680" y="750" width="280" height="100" as="geometry" /></mxCell>
+        <mxCell id="infra" value="Infrastructure&#xa;Adaptadores implementam portas&#xa;Depende de Application, Domain e Core" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#EAF2F8;strokeColor=#2F80ED;fontColor=#123B5D;fontSize=15;arcSize=12;" vertex="1" parent="1"><mxGeometry x="1050" y="590" width="300" height="110" as="geometry" /></mxCell>
+        <mxCell id="cross" value="CrossCutting&#xa;Somente composição opcional" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F1F4F7;strokeColor=#718096;fontColor=#263746;fontSize=15;dashed=1;arcSize=12;" vertex="1" parent="1"><mxGeometry x="1200" y="370" width="240" height="100" as="geometry" /></mxCell>
+        <mxCell id="legend" value="Hosts são compostos na borda. Infrastructure aponta para dentro; Domain nunca depende de Infrastructure. Java, Python, PHP e outras stacks usam estruturas físicas idiomáticas." style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F1F4F7;strokeColor=#AAB6C2;fontColor=#263746;fontSize=14;arcSize=8;" vertex="1" parent="1"><mxGeometry x="50" y="770" width="540" height="95" as="geometry" /></mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;strokeColor=#2F80ED;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="api" target="app"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;strokeColor=#2F80ED;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="app" target="domain"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;strokeColor=#2F80ED;strokeWidth=2;endArrow=block;endFill=1;" edge="1" parent="1" source="domain" target="core"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" value="composição" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=0;dashed=1;strokeColor=#718096;endArrow=block;endFill=1;fontColor=#526170;" edge="1" parent="1" source="api" target="cross"><mxGeometry relative="1" as="geometry" /></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
